@@ -1,0 +1,26 @@
+const storeButton = document.getElementById("store-btn");
+const retrieveButton = document.getElementById("retrieve-btn");
+
+storeButton.addEventListener("click", () => {
+    const userId = 123;
+    const user = {
+        name: "Kanishka",
+        age: 24,
+        hobbies: ["Sports", "Cooking"],
+      };
+   document.cookie = `uid=${userId}; max-age=50`;
+   document.cookie = `user=${JSON.stringify(user)}`;
+
+  });
+  
+  retrieveButton.addEventListener("click", () => {
+   /*  const extractedId = localStorage.getItem("uuid");
+    const extractedUser = JSON.parse(localStorage.getItem("user")); */
+    console.log(document.cookie);
+/*     if (extractedId) {
+      console.log("Got the id");
+    } else {
+      console.log("Error in getting the id");
+    } */
+  });
+  ;
